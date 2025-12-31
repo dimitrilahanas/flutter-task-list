@@ -4,7 +4,7 @@ class DialogueButton extends StatelessWidget {
   final String buttonName;
   final VoidCallback onPressed;
 
-  DialogueButton({
+  const DialogueButton({
     super.key,
     required this.buttonName,
     required this.onPressed,

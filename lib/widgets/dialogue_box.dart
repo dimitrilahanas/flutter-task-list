@@ -6,7 +6,7 @@ class DialogueBox extends StatelessWidget {
   final VoidCallback onSave;
   final VoidCallback onCancel;
 
-  DialogueBox({
+  const DialogueBox({
     super.key, 
     required this.controller,
     required this.onSave,
