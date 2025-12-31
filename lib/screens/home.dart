@@ -9,8 +9,18 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List taskList = [];
-  
+  List taskList = [
+    ['Homework', false],
+    ['Homework', false],
+    ['Homework', false],
+  ];
+
+  void checkBoxChanged(bool? value, int index) {
+    setState(() {
+      taskList[index][1] = !taskList[index][1];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,11 +30,15 @@ class _HomeState extends State<Home> {
         title: Text('Tasks'),
       ),
 
-      body: ListView(
-        children: [
-          TaskTile(taskName: 'homework', isCompleted: false),
-          TaskTile(taskName: 'homework', isCompleted: false),
-        ],
+      body: ListView.builder(
+        itemCount: taskList.length,
+        itemBuilder:(context, index) {
+          return TaskTile(
+            taskName: taskList[index][0], 
+            isCompleted: taskList[index][1],
+            onChanged: (value) => checkBoxChanged(value, index),
+          );
+        },
       )
     );
   }
