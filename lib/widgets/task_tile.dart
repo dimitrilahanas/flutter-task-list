@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class TaskTile extends StatelessWidget {
   final String taskName;
   final bool isCompleted;
-  Function(bool?)? onChanged;
+  final Function(bool?)? onChanged;
 
-  TaskTile({
+  const TaskTile({
     super.key, 
     required this.taskName, 
     required this.isCompleted,
