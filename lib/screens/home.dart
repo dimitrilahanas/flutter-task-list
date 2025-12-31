@@ -12,11 +12,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final _controller = TextEditingController();
 
-  List taskList = [
-    ['Homework', false],
-    ['Homework', false],
-    ['Homework', false],
-  ];
+  List taskList = [];
 
   void checkBoxChanged(bool? value, int index) {
     setState(() {

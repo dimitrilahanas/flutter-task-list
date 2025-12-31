@@ -3,8 +3,8 @@ import 'package:flutter_task_list/widgets/dialogue_button.dart';
 
 class DialogueBox extends StatelessWidget {
   final controller;
-  VoidCallback onSave;
-  VoidCallback onCancel;
+  final VoidCallback onSave;
+  final VoidCallback onCancel;
 
   DialogueBox({
     super.key, 

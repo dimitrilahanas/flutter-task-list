@@ -9,7 +9,7 @@ class TaskTile extends StatelessWidget {
     super.key, 
     required this.taskName, 
     required this.isCompleted,
-    required this.onChanged
+    required this.onChanged,
   });
 
   @override

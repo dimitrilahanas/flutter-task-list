@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class DialogueButton extends StatelessWidget {
   final String buttonName;
-  VoidCallback onPressed;
+  final VoidCallback onPressed;
 
   DialogueButton({
     super.key,
